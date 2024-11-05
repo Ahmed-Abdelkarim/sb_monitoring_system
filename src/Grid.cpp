@@ -31,3 +31,6 @@ void Grid::setVoltage(int V){
 int Grid::getVoltage(){
     return voltage;
 }
+int Grid::getFreq(){
+    return frequency;
+}

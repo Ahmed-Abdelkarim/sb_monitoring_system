@@ -23,3 +23,6 @@ void HouseGrid::setVoltage(int V){
 int HouseGrid::getVoltage(){
     return voltage;
 }
+int HouseGrid::getFreq(){
+    return frequency;
+}

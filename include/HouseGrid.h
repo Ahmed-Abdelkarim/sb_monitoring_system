@@ -14,4 +14,5 @@ public:
     int getCurrent();
     void setVoltage(int V);
     int getVoltage();
+    int getFreq();
 };

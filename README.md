@@ -10,6 +10,7 @@
     - [Installation](#installation)
     - [Docker Usage](#docker-usage)
 3. [Project Structure](#project-structure)
+4. [UML Diagram](#uml-diagram)
 4. [Contact](#contact)
 
 ---
@@ -97,7 +98,8 @@ project-name/
 ├── Dockerfile              # Docker file
 └── README.md               # Project README
 ```
-
+## UML Diagram
+![](./SB_sys_design_uml.svg)
 
 ## Contact
 
