@@ -1,13 +1,13 @@
 #include "installation.h"
 
-installation::installation(int id, int selected_setup)
+installation::installation(int id, int selected_setup, std::unique_ptr<Network> network_ptr)
 {
     houseId = id;
     sb_setup = (SETUP)selected_setup;
     installationDate = 0;
     totalCost = 0;
     revenue = 0;
-    sb_ptr = std::make_unique<sbStorage>();
+    sb_ptr = std::make_unique<sbStorage>(std::move(network_ptr));
     sb_ptr->setup(sb_setup);
     sb_ptr->energeAlgo();
     printDetails();
@@ -25,7 +25,6 @@ int installation::calcRevenue(int id){
 }
 void installation::printDetails(){
     std::cout << "Installation Details:\nInstallation type: "<< (int)sb_setup << "\ninstallation date: "<<installationDate << std::endl;
-    std::cout << "House id: " << houseId << "\ntotal revenue: "<< revenue << "\ntotal cost: "<<totalCost << std::endl;
 }
 installation::~installation()
 {

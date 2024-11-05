@@ -27,9 +27,9 @@ private:
     int storage;
     int capacity;
     MODE charge_mode;
+    std::unique_ptr<Network> network_ptr_;
 public:
-    std::shared_ptr<Network> network_ptr;
-    sbStorage();
+    sbStorage(std::unique_ptr<Network> network_ptr);
     ~sbStorage();
     void setup(SETUP s);
     void setChargeMode(int m);

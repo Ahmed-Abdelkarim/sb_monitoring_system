@@ -14,7 +14,7 @@ private:
     int installationDate;
     std::unique_ptr<sbStorage> sb_ptr;
 public:
-    installation(int id, int selected_setup);
+    installation(int id, int selected_setup, std::unique_ptr<Network> network_ptr);
     int calcCost(int id);
     int calcRevenue(int id);
     void printDetails();

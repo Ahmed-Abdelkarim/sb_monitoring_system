@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
+#include <stdexcept>
 #include <memory>
 #include "installation.h"
 
@@ -12,12 +13,14 @@ private:
     int age;
     std::string email;
     int type;
+    int houseId;
+    std::unique_ptr<installation> install_ptr;
 public:
     HouseOwner(/* args */);
     HouseOwner(std::string userName, int userAge, std::string useEmail);
-    void browseTypes();
-    void installSB();
+    void selectType(int t, std::unique_ptr<Network> network_ptr);
+    int getCost();
+    int getRevenue();
     void printDetails();
-    ~HouseOwner();
 };
 
